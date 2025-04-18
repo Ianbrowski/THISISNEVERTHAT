@@ -1,0 +1,754 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-image: url('asset/m.gif');
+  background-size: cover;
+  backdrop-filter: blur(5px);
+}
+
+header {
+  background-color: #460101;
+  /* padding: 26px 0; */
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  border-bottom: 0.5px solid #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly; /* Space between logo and nav links */
+  align-items: center;
+  
+}
+.nav-logo {
+  width: 30%; /* Make the image take up the full width of its container */
+  height: auto; /* Maintain the aspect ratio */
+  max-height: 100px; /* Limit the maximum height */
+  object-fit: cover;/* Maintain aspect ratio */
+  margin-right: 20px; /* Add spacing between the logo and nav links */
+}
+
+#intro {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px;
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.enter{
+  border-radius: 10px;
+  background-color: #000000b3;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: #fff;
+  text-shadow: 0 0 10px #000, 0 0 20px #fff;
+  animation: fadeIn 0.5s ease-in-out;
+  /* Fade in effect */
+  animation-delay: 0.5s;
+  /* Delay before the animation starts */
+  animation-fill-mode: forwards;
+  /* Keep the final state of the animation */
+  margin-top: -40px;
+
+}
+.enter:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(1.1) translateY(20px);
+  /* Scale and translate on hover */
+  background-color: #000000b3;
+  /* Change background color on hover */
+  color: #a10000;
+  padding: 15px;
+  font-size: 15px;
+  
+  text-shadow: 0 0 10px #000, 0 0 20px #be0000;
+}
+.enter:active {
+  background-color: #a10000;
+  border-radius: 4px;
+  animation: shake 0.5s ease;
+  animation-iteration-count: 1;
+  /* Ensure the animation only happens once per hover */
+}
+#main-content {
+  display: none;
+  margin: 0;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: transform 0.3s ease;
+  /* Smooth transition for transformations */
+  display: inline-block;
+  /* Ensures the shake animation applies correctly */
+}
+
+.nav-list li a:active {
+  background-color: #b80a12;
+  border-radius: 4px;
+  animation: shake 0.5s ease;
+  animation-iteration-count: 1;
+  /* Ensure the animation only happens once per hover */
+}
+
+.this {
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: 15px;
+}
+
+.bitch {
+  font-size: 25px;
+  font-weight: strong;
+}
+
+.gotME {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  text-decoration-color: none;
+  text-decoration-style: none;
+  color: inherit;
+}
+
+section {
+  background-color: #000000b3;
+}
+
+/* Home Section */
+#home {
+  background: url('your-image.jpg') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  margin-top: -30px;
+
+}
+
+.home-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
+  /* Adding text shadow */
+}
+
+.home-content p {
+  font-size: 1.5em;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
+  /* Adding text shadow */
+}
+
+/* About Section */
+#about {
+  padding: 50px 20px;
+  background-color: #ecf0f1;
+  color: #460101;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
+
+.about-image {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+  max-width: auto;
+  line-height: 1.5;
+}
+
+.about-text h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.em;
+  white-space: pre-line;
+  /* Ensures that line breaks in HTML are preserved */
+}
+
+
+/* Projects Section */
+#projects {
+  padding: 50px 20px;
+}
+
+.projects-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #ecf0f1;
+}
+
+.project-item {
+  margin-bottom: 30px;
+}
+
+.project-item h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.more {
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+.more:hover,
+more:focus {
+  transform: scale(1.1) translateY(20px);
+}
+
+.project-image {
+  width: 50%;
+  /* Set the desired width */
+  height: 250px;
+  /* Set the desired height */
+  object-fit: cover;
+  /* Maintain aspect ratio and cover the entire area */
+  border-radius: 8px;
+  /* Optional: for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Optional: for shadow effect */
+  
+}
+
+.projectclick {
+  transition: 0.5s ease-in-out;
+  
+
+}
+
+.projectclick:hover,
+projectclicker:focus {
+  transform: scale(1.1) translateX(60px);
+  
+}
+
+/* Resume Section */
+#resume {
+  padding: 50px 20px;
+  background-color: #ecf0f1;
+  color: #460101;
+}
+
+.resume-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.resume-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  /* Space between text and image */
+  flex-wrap: wrap;
+  /* Allow wrapping on smaller screens */
+}
+
+.resume-text {
+  flex: 1;
+  max-width: 600px;
+  /* Adjust width as needed */
+}
+
+.resume-image-container {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.resume-image {
+  width: 250px;
+  /* Adjust width as needed */
+  height: auto;
+  border-radius: 8px;
+  /* Optional: for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Optional: for shadow effect */
+}
+
+.resume-section h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.resume-section p,
+.resume-section ul {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.resume-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.resume-section ul li {
+  margin-bottom: 10px;
+}
+
+.hover-container {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.download-btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  perspective: 1000px;
+  /* Adds perspective to the 3D effect */
+  transform-style: preserve-3d;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  /* Change cursor to pointer for the entire hitbox */
+}
+
+
+.download-btn:hover,
+.download-btn:focus {
+  transform: rotateX(0deg) rotateY(0deg);
+  /* Reset transformation on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  /* Increased shadow on hover */
+}
+
+
+/* Video Section */
+#video {
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+}
+
+.video-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.video-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #460101;
+  color: white;
+}
+@media (max-width: 768px) {
+  body {
+      margin: 0;
+      padding: 0;
+  }
+
+  header {
+      margin: 0;
+      padding: 10px; /* Optional: Add padding for better spacing */
+  }
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .this {
+    font-size: 35px; /* Reduce font size for smaller screens */
+    letter-spacing: 10px; /* Adjust letter spacing */
+  }
+
+  .bitch {
+    font-size: 20px; /* Reduce font size */
+    font-weight: bold; /* Ensure bold weight */
+  }
+
+  .gotME {
+    font-size: 15px; /* Reduce font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .this {
+    font-size: 25px; /* Further reduce font size for very small screens */
+    letter-spacing: 5px; /* Adjust letter spacing */
+  }
+
+  .bitch {
+    font-size: 18px; /* Further reduce font size */
+  }
+
+  .gotME {
+    font-size: 12px; /* Further reduce font size */
+  }
+}
+/* Define the shake animation using keyframes */
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px) translateY(-3px) rotate(-3deg);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px) translateY(3px) rotate(3deg);
+  }
+}
+
+
+/* Define keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Initial state for animated elements */
+.animated {
+  opacity: 0;
+  transform: translateY(20px);
+  /* or translateX for slideIn */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Animation when element is in view */
+.animated.visible.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.animated.visible.slide-in {
+  animation: slideIn 0.6s ease forwards;
+}
+
+
+@media (max-width: 768px) {
+
+  .projectclick:hover,
+  .projectclick:active {
+    transform: none;
+    /* Remove transformation effects */
+    /* Optionally, you can reset other styles if needed */
+  }
+    
+  }
+  #home {
+    background-image: url('asset/m.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+  }
+
+  .gotME {
+    font-size: 50%;
+    font-weight: normal;
+  }
+
+
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0;
+  }
+
+  .home-content h1 {
+    font-size: 2.5em;
+  }
+
+  .about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+  }
+
+  .about-content h2,
+  .projects-content h2 {
+    font-size: 2em;
+  }
+
+  .project-item h3 {
+    font-size: 1.5em;
+  }
+
+  .resume-content h2,
+  .resume-section h3 {
+    font-size: 1.5em;
+  }
+
+  .resume-section p,
+  .resume-section ul {
+    font-size: 1em;
+  }
+
+  .resume-info {
+    flex-direction: column;
+    /* Stack text and image on smaller screens */
+    align-items: center;
+    /* Center align on small screens */
+  }
+
+  .resume-image {
+    margin-top: 20px;
+    /* Space between text and image on small screens */
+  }
+
+@media (max-width: 768px) {
+  #intro {
+      font-size: 30px; /* Reduce font size for smaller screens */
+      letter-spacing: 5px; /* Adjust letter spacing */
+      margin-top: 200px; /* Adjust margin for better alignment */
+  }
+
+  .enter {
+      font-size: 10px; /* Reduce button font size */
+      padding: 8px; /* Adjust button padding */
+      letter-spacing: 3px; /* Adjust letter spacing */
+      margin-top: -20px; /* Adjust margin for better alignment */
+  }
+
+  .enter:hover {
+      font-size: 12px; /* Slightly increase font size on hover */
+      padding: 10px; /* Adjust padding on hover */
+  }
+}
+
+@media (max-width: 480px) {
+  #intro {
+      font-size: 20px; /* Further reduce font size for very small screens */
+      letter-spacing: 3px; /* Adjust letter spacing */
+      margin-top: 250px; /* Adjust margin for better alignment */
+  }
+
+  .enter {
+      font-size: 8px; /* Further reduce button font size */
+      padding: 6px; /* Adjust button padding */
+      letter-spacing: 2px; /* Adjust letter spacing */
+      margin-top: -10px; /* Adjust margin for better alignment */
+  }
+
+  .enter:hover {
+      font-size: 10px; /* Slightly increase font size on hover */
+      padding: 8px; /* Adjust padding on hover */
+  }
+}
+.header2 {
+  background: #460101;
+  color: white;
+  padding: 0px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.back-button-container {
+text-align: center;
+margin: 20px 0;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 20px;
+  padding: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #000000b3;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
+  filter: grayscale(0%);
+}
+
+/* Modal Styles */
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  z-index: 1000;
+}
+
+#modal img {
+max-width: 80%; /* Ensure the image doesn't exceed the screen width */
+max-height: 80%; /* Ensure the image doesn't exceed the screen height */
+width: auto; /* Maintain aspect ratio */
+height: auto; /* Maintain aspect ratio */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Add shadow */
+object-fit: contain; /* Ensure the image fits within the modal */
+}
+
+#modal .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+.project-grid {
+grid-template-columns: 1fr; /* Single column on smaller screens */
+}
+}
+.project-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr); /* Two columns */
+gap: 20px; /* Space between items */
+padding: 20px;
+}
+
+.project-item {
+background: #1c1c1c; /* Dark background for each project */
+padding: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+text-align: center;
+}
+
+.project-item h3 {
+color: #ffffff;
+margin-bottom: 10px;
+}
+
+.project-item img {
+width: 100%; /* Make the image responsive */
+height: auto;
+margin-bottom: 10px;
+}
+
+.project-item p {
+color: #cccccc;
+font-size: 14px;
+line-height: 1.5;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gallery</title>
+    <link rel="shortcut icon" href="asset/ssss.png" type="image/x-icon">
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+    <header class="header2">
+        <h1>The Gallery</h1>
+        <div class="back-button-container ">
+            <a href="index.html" class="nav-list li a">Back to Home</a>
+        </div>
+    </header>
+
+    <div class="gallery-container">
+        <!-- 10 Images -->
+        <img src="gallery/1.jpg" alt="Image 1" onclick="openModal(this.src)">
+        <img src="gallery/2.jpg" alt="Image 2" onclick="openModal(this.src)">
+        <img src="gallery/3.jpg" alt="Image 3" onclick="openModal(this.src)">
+        <img src="gallery/4.jpg" alt="Image 4" onclick="openModal(this.src)">
+        <img src="gallery/5.jpg" alt="Image 5" onclick="openModal(this.src)">
+        <img src="gallery/6.jpg" alt="Image 6" onclick="openModal(this.src)">
+        <img src="gallery/7.jpg" alt="Image 7" onclick="openModal(this.src)">
+        <img src="gallery/8.jpg" alt="Image 8" onclick="openModal(this.src)">
+        <img src="gallery/9.jpg" alt="Image 9" onclick="openModal(this.src)">
+        <img src="gallery/10.jpg" alt="Image 10" onclick="openModal(this.src)">
+    </div>
+
+    <footer>
+        <p class="">&copy; 2024 and to infinity and beyond. Tejada, John Christian A. All Rights
+            Reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img id="modal-img" alt="Full Image">
+    </div>
+
+    <script>
+        // Open Modal
+        function openModal(src) {
+            const modal = document.getElementById("modal");
+            const modalImg = document.getElementById("modal-img");
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        // Close Modal
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
